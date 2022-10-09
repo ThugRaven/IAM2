@@ -1,0 +1,53 @@
+html,
+body {
+	height: 100%;
+	padding-top: 40px;
+	background: #c5cae9;
+	color: #1a237e;
+}
+.btn.btn-primary {
+	background-color: #3d5afe;
+	border-color: #3d5afe;
+	border-radius: 0px;
+}
+.btn.btn-danger {
+	background-color: #5c6bc0;
+	border-color: #5c6bc0;
+	border-radius: 0px;
+}
+.form-control {
+	border-radius: 0px;
+}
+header {
+	border-bottom: #999 1px solid;
+	font-size: 200%;
+	font-weight: bold;
+	padding-bottom: 12px;
+}
+a:link {
+	color: #1a237e;
+}
+a:visited {
+	color: #1a237e;
+}
+a:hover {
+	color: #999;
+}
+a:active {
+	color: #999;
+}
+
+.boldGray {
+	font-weight: bold;
+	color: gray;
+}
+.no-bullet {
+	list-style: none;
+}
+.horizontal-list {
+	display: inline-block;
+}
+.marked {
+	text-decoration: underline;
+	font-weight: bold;
+}

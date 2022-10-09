@@ -1,0 +1,78 @@
+{{> header.html}}
+
+<div class="container">
+	<div id="text">
+		<p>Akapit 1</p>
+		<p>Akapit 2</p>
+		<p>Akapit 3</p>
+		<p>Akapit 4</p>
+		<p>Akapit 5</p>
+	</div>
+</div>
+<ul id="listaRoslin">
+	<li>
+		Rośliny [1 poziom]
+		<ul id="rosliny">
+			<li>
+				Rośliny drzewiaste
+				<ul>
+					<li>drzewa [3 poziom]</li>
+					<li>krzewy [3 poziom]</li>
+					<li>krzewinki [3 poziom]</li>
+				</ul>
+			</li>
+			<li>
+				Rośliny zielne
+				<ul>
+					<li>rośliny jednoroczne [3 poziom]</li>
+					<li>rośliny dwuletnie [3 poziom]</li>
+					<li>byliny [3 poziom]</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		Zwierzęta [1 poziom]
+		<ul id="zwierzeta">
+			<li>ryby</li>
+			<li>ptaki</li>
+			<li>gady</li>
+			<li>płazy</li>
+			<li>owady</li>
+			<li>ssaki</li>
+		</ul>
+	</li>
+</ul>
+
+{{> footer.html}}
+
+<script>
+	$(document).ready(function () {
+		// 1
+		$('#text p').css({ 'font-weight': 'bold', color: 'red' });
+		$('#text p:nth-child(2)').css({ color: 'blue' });
+		$('#text p:last').css({ color: 'blue' });
+
+		// 2
+		$('#listaRoslin, #listaRoslin ul ul').addClass('no-bullet');
+
+		// 3
+		$('#listaRoslin > li').addClass('horizontal-list');
+
+		// 4
+		$('#rosliny li ul li:last-child').addClass('marked');
+
+		// 5
+		$('#listaRoslin ul:not(:has(ul)) li').each((index, el) => {
+			$(el).append(`<a href=https://us.edu.pl/${index}> &rarr;</a>`);
+		});
+
+		$('#listaRoslin ul:not(:has(ul)) li').each(function (index) {
+			$(this).append(`<a href=https://us.edu.pl/${index}> &uarr;</a>`);
+		});
+
+		$('#listaRoslin ul ul li, #listaRoslin ul:last li').each((index, el) => {
+			$(el).append(`<a href=https://us.edu.pl/${index}> &darr;</a>`);
+		});
+	});
+</script>
