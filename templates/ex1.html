@@ -50,8 +50,9 @@
 	$(document).ready(function () {
 		// 1
 		$('#text p').css({ 'font-weight': 'bold', color: 'red' });
-		$('#text p:nth-child(2)').css({ color: 'blue' });
-		$('#text p:last').css({ color: 'blue' });
+		$('#text p:nth-child(2), #text p:last')
+			.css({ color: 'blue' })
+			.text('Dynamiczny tekst');
 
 		// 2
 		$('#listaRoslin, #listaRoslin ul ul').addClass('no-bullet');
